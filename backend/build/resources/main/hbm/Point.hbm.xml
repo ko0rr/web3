@@ -1,0 +1,28 @@
+<hibernate-mapping package="web.entity">
+    <class name="Point" table="points" schema="public">
+        <id name="id" type="java.lang.Long">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="x" type="float">
+            <column name="x"/>
+        </property>
+        <property name="y" type="float">
+            <column name="y"/>
+        </property>
+        <property name="r" type="float">
+            <column name="r"/>
+        </property>
+        <property name="hit" type="boolean">
+            <column name="hit"/> </property>
+        <property name="serverTime" type="string">
+            <column name="server_time"/>
+        </property>
+        <property name="scriptTime" type="long">
+            <column name="script_time"/>
+        </property>
+        <many-to-one name="user" class="web.entity.User" fetch="join">
+            <column name="user_id" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
