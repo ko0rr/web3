@@ -1,0 +1,500 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4 linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#main_container {
+    position: relative;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    min-height: calc(100vh - 40px);
+}
+
+#lab {
+    position: relative;
+    z-index: 2;
+    background: #667eea;
+    color: white;
+    padding: 25px 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    /* Удалено: box-shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lab h1 {
+    font-family: 'Fantasy', 'Arial Black', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#container_with_image {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#lab h2 {
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.login_form {
+    position: relative;
+    z-index: 2;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+
+.form_group {
+    margin-bottom: 25px;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #34495e;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+}
+
+.form_group input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+.form_group input:focus {
+    border-color: #3498db;
+    background: white;
+    outline: none;
+}
+
+.form_group input::placeholder {
+    color: #95a5a6;
+    font-style: italic;
+}
+
+#button_container {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+#login_button, #submit_button {
+    flex: 1;
+    background: #667eea;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    /* Удалено: transition */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#login_button:hover, #submit_button:hover {
+    background: #764ba2;
+}
+
+#clear_form_button {
+    flex: 1;
+    background: #f5576c;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    /* Удалено: transition */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#clear_form_button:hover {
+    background: #f093fb;
+}
+
+.swicth_button {
+    display: block;
+    text-align: center;
+    color: #3498db;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.swicth_button:hover {
+    background: rgba(52, 152, 219, 0.1);
+    border-color: #3498db;
+}
+
+#container_with_home_button {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+#logout {
+    width: auto;
+    height: auto;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#logout:hover {
+    background: #764ba2;
+}
+
+#logout::before {
+    content: "Выход";
+}
+
+#canvas_container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+#left_column {
+    flex: 1;
+    min-width: 400px;
+}
+
+#main_form {
+    margin-bottom: 40px;
+}
+
+#choice_of_x,
+#choice_of_y,
+#choice_of_r {
+    margin-bottom: 30px;
+}
+
+.label_name {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #34495e;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+}
+
+.p-dropdown {
+    width: 100%;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.p-dropdown:not(.p-disabled):hover {
+    border-color: #3498db;
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+    border-color: #3498db;
+
+}
+
+.p-dropdown-panel {
+    border: 2px solid #3498db;
+    border-radius: 10px;
+
+}
+
+.p-inputtext {
+    width: 100%;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+.p-inputtext:enabled:hover {
+    border-color: #3498db;
+}
+
+.p-inputtext:enabled:focus {
+    border-color: #3498db;
+}
+
+#label_input_container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+#label_input_container .label_name {
+    margin-bottom: 0;
+    min-width: 100px;
+}
+
+#main_canvas {
+    flex: 1;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 3px solid #e9ecef;
+}
+
+canvas {
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #dee2e6;
+    cursor: crosshair;
+}
+
+canvas:hover {
+    border-color: #3498db;
+}
+
+#history_header {
+    color: #2c3e50;
+    margin: 30px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3498db;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#table_container {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead {
+    background: #667eea;
+}
+
+thead th {
+    color: white;
+    padding: 18px 15px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+tbody tr {
+
+    border-bottom: 1px solid #f1f1f1;
+}
+
+tbody tr:hover {
+    background: rgba(102, 126, 234, 0.1);
+
+}
+
+tbody td {
+    padding: 16px 15px;
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.error_base {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 8px;
+    padding: 12px 15px;
+    background: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid #e74c3c;
+    border-radius: 0 8px 8px 0;
+    display: none;
+
+}
+
+.error_base.show {
+    display: block;
+}
+
+.error_container {
+    margin-top: 20px;
+    min-height: 50px;
+}
+
+#canvas_error {
+    text-align: center;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    #canvas_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #left_column,
+    #main_canvas {
+        min-width: 100%;
+    }
+
+    #main_canvas {
+        order: -1;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    #main_container {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    #lab {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .login_form,
+    #canvas_container {
+        padding: 25px;
+    }
+
+    #button_container {
+        flex-direction: column;
+    }
+
+    #label_input_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    #logout {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    #logout::before {
+        content: "";
+    }
+}
+
+.notification-box {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.server_message {
+    font-size: 13px;
+    margin-top: 8px;
+    padding: 12px 15px;
+    border-radius: 0 8px 8px 0;
+    display: block;
+    font-weight: 600;
+}
+
+.server_message.success {
+    color: #27ae60;
+    background: rgba(39, 174, 96, 0.1);
+    border-left: 4px solid #27ae60;
+}
+
+@media (max-width: 480px) {
+    #lab h1 {
+        font-size: 22px;
+    }
+
+    #lab h2 {
+        font-size: 16px;
+    }
+
+    .label_name {
+        font-size: 12px;
+    }
+
+    canvas {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    #history_header {
+        font-size: 18px;
+    }
+}
+
+
+.form_group input:invalid {
+    border-color: #e74c3c;
+
+}
+
+
+#root {
+    opacity: 1;
+}
+
